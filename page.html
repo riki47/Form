@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Intro</title>
+  <!-- Optional: Import a modern font from Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+  <style>
+    /* Global Styles */
+    body {
+    height: 100%;
+    width: 100%;
+    
+    background: url('./images/img.jpg') no-repeat center center/cover;
+      margin: 0;
+      padding: 0;
+      font-family: 'Montserrat', sans-serif;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      font-weight: 100;
+    }
+    
+    /* Content Container */
+    .container {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      padding: 40px;
+      max-width: 600px;
+      width: 90%;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(5px);
+      text-align: center;
+    }
+    
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      margin: 10px 0;
+    }
+    div.con{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 10%;
+    }
+    p.namef
+    {
+      border: solid;
+      padding: 10px;
+      border-radius: 40px;
+      font-weight: 100;
+    }
+    p.emailf
+    {
+      border: solid;
+      padding: 10px;
+      border-radius: 40px;
+      font-weight:lighter;
+    }
+    strong
+    {
+      font-size: x-large;
+      font-weight: 500;
+    }
+    
+    .intro-details {
+      margin-top: 20px;
+    }
+    
+    .dynamic-website {
+      font-style: italic;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome!</h1>
+    <div class="intro-details">
+      <div class="con"><strong >Name:</strong> <p class="namef">Your Name</p></div>
+      <div class="con"><strong>login account:</strong> <p class="emailf">Your Age</p></div>
+    </div>
+    <div class="dynamic-website">
+      <p>Explore my dynamic website where creativity meets technology. Dive into a world of innovation and aesthetics, crafted just for you.</p>
+    </div>
+  </div>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    let namef = document.querySelector(".namef");
+    let emailf = document.querySelector(".emailf");
+    // Get the name and email parameters
+    const name = params.get('name');
+    const email = params.get('email');
+  
+    namef.innerText = name;
+    emailf.innerText = email;
+  </script>
+</body>
+</html>
